@@ -1,0 +1,27 @@
+# robots.txt — proplex.online
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Разрешаем индексацию ресурсов
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Карта сайта
+Sitemap: https://proplex.online/sitemap.xml
+
+# Основной домен (Яндекс)
+Host: https://proplex.online
+
+# Задержка между запросами
+Crawl-delay: 1
+
+# Разрешаем индексацию изображений
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+User-agent: YandexImages
+Allow: /assets/img/
