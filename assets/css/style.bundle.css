@@ -346,9 +346,19 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="submit"]:not(:disa
   .navbar-toggler {
     margin-left: auto;
     order: 1;
+    --bs-navbar-toggler-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
   }
   .navbar-collapse {
     order: 2;
+  }
+  .navbar-brand {
+    max-width: 120px;
+    margin-right: 0.5rem;
+  }
+  .btn-sm {
+    --bs-btn-padding-x: 0.25rem;
+    --bs-btn-padding-y: 0.125rem;
   }
 }
 
