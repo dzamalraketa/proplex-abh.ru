@@ -67,16 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Сбор данных формы
             const formData = new FormData(form);
-            const data = {
-                user_name: formData.get('user_name'),
-                user_phone: formData.get('user_phone'),
-                user_address: formData.get('user_address'),
-                yandex_id: yandexId,
-                time_spent: timeSpent.toFixed(1)
+            const payload = {
+                "Проект": "proplex",
+                "Имя": formData.get('user_name'),
+                "Телефон": formData.get('user_phone'),
+                "Адрес": formData.get('user_address')
             };
 
             // Отладочная информация
-            console.log('Отправляемые данные:', data);
+            console.log('Отправляемые данные:', payload);
 
             // Блокировка кнопки
             submitBtn.disabled = true;
@@ -91,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(payload)
                 });
 
                 if (response.ok) {
