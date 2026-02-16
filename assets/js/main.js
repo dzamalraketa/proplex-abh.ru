@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     // Яндекс.Метрика цель
                     if (typeof ym !== 'undefined') {
-                        ym(106787007, 'reachGoal', 'lead_sent');
+                        ym(106849239, 'reachGoal', 'lead_sent');
                     }
                     
                     statusDiv.textContent = '✅ Заявка отправлена! Мастер свяжется с вами.';
