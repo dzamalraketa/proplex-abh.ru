@@ -1,6 +1,6 @@
 // Telegram API настройки
-const TG_TOKEN = 'YOUR_BOT_TOKEN';
-const CHAT_ID = 'YOUR_CHAT_ID';
+const TG_TOKEN = '8537015865:AAEpvT0YLN6IJ9McCymLSeNNQ_M9h-soyGU'; // Ваш реальный токен
+const CHAT_ID = '7983665490'; // Ваш реальный ID чата
 
 // Модальное окно функциональность
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 user_address: formData.get('user_address')
             };
 
+            // Отладочная информация
+            console.log('Отправляемые данные:', data);
+
             // Блокировка кнопки
             submitBtn.disabled = true;
             submitBtn.textContent = 'Отправка...';
@@ -90,11 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         statusDiv.textContent = '';
                     }, 3000);
                 } else {
-                    throw new Error('Telegram API error');
+                    const errorData = await response.json().catch(() => ({}));
+                    const errorMsg = errorData.description || 'Неизвестная ошибка Telegram API';
+                    throw new Error(`Telegram API Error (${response.status}): ${errorMsg}`);
                 }
             } catch (error) {
                 console.error('Ошибка отправки:', error);
-                statusDiv.textContent = '❌ Ошибка отправки. Попробуйте еще раз.';
+                statusDiv.textContent = `❌ Ошибка: ${error.message}`;
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'ОТПРАВИТЬ';
