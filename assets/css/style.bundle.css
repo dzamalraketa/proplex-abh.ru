@@ -1115,6 +1115,15 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="submit"]:not(:disa
   text-align: center;
 }
 
+/* Сохранить оригинальные цвета иконок */
+.whatsapp-button .dropdown-item .fa-whatsapp {
+  color: #25D366 !important;
+}
+
+.whatsapp-button .dropdown-item .fa-telegram {
+  color: #0088cc !important;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .whatsapp-button {
