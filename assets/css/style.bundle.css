@@ -1081,6 +1081,77 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="submit"]:not(:disa
   animation: pulse-green 2s infinite;
 }
 
+/* ---- Floating WhatsApp Button & Dropdown Fixes ---- */
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+}
+
+/* Enhanced dropdown visibility */
+.whatsapp-button .dropdown-menu {
+  background-color: #212529 !important;
+  border: 1px solid #495057 !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+  border-radius: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.whatsapp-button .dropdown-item {
+  color: #ffffff !important;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.whatsapp-button .dropdown-item:hover {
+  background-color: #343a40 !important;
+  color: #ffffff !important;
+}
+
+.whatsapp-button .dropdown-item i {
+  font-size: 1.25rem !important;
+  width: 20px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-button .btn-float {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .whatsapp-button .dropdown-menu {
+    min-width: 180px !important;
+    right: -10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-button {
+    bottom: 80px;
+    right: 15px;
+  }
+  
+  .whatsapp-button .btn-float {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Ensure dropdown appears above other elements */
+.whatsapp-button .dropdown-menu.show {
+  z-index: 10000 !important;
+}
+
 /* ===========================
    RESPONSIVE — Theme
    =========================== */
