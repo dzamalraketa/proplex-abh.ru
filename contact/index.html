@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <!-- Единый файл стилей -->
     <link rel="stylesheet" href="../assets/css/style.bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 
@@ -28,7 +29,7 @@
             </a>
             <!-- Mobile CTA button - always visible -->
             <a href="#" class="btn btn-success btn-sm d-lg-none me-2 js-open-modal">Вызвать замерщика</a>
-            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav">
+            <button data-toggle="navbar-collapse" class="navbar-toggler" type="button">
                 <span class="visually-hidden">Меню</span><span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,7 +50,7 @@
     
     <!-- Слайдер (пути к картинкам обновлены) -->
     <main class="page cv-page" style="border-style: none; padding-top: 70px;">
-        <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500" id="carousel-2">
+        <div class="carousel slide" data-ride="carousel" data-interval="4500" id="carousel-2">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100 d-block" src="../assets/img/tech/1.jpg" alt="Установка окон PROPLEX" loading="lazy" style="margin-top: 15px;">
@@ -209,7 +210,7 @@
     <div class="whatsapp-button dropup" style="position:fixed;bottom:30px;right:30px;z-index:1000;">
         <button class="btn btn-success btn-float rounded-circle" 
             type="button" 
-            data-bs-toggle="dropdown"
+            data-toggle="dropdown"
             aria-expanded="false"
             style="width:60px;height:60px;box-shadow:0 5px 15px rgba(0,0,0,0.3);">
             <i class="fab fa-whatsapp fa-lg"></i>
@@ -280,7 +281,7 @@
 </div>
 
     <!-- Скрипты -->
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/custom-components.js"></script>
 </body>
 </html>
