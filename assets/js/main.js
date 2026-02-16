@@ -1,7 +1,3 @@
-// Telegram API настройки
-const TG_TOKEN = '8537015865:AAEpvT0YLN6IJ9McCymLSeNNQ_M9h-soyGU'; // Ваш реальный токен
-const CHAT_ID = '7983665490'; // Ваш реальный ID чата
-
 // Глобальная переменная для отслеживания времени
 const startTime = Date.now();
 
@@ -88,24 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
             statusDiv.textContent = '';
 
             try {
-                // Отправка в Telegram
-                const message = `🏠 ЗАЯВКА НА ЗАМЕР (PROPLEX)
-👤 Имя: ${data.user_name}
-📞 Телефон: ${data.user_phone}
-📍 Адрес: ${data.user_address || 'Не указан'}
-🔍 Yandex ID: ${data.yandex_id}
-⏱️ Время на странице: ${data.time_spent} сек.`;
-
-                const response = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+                // Отправка через Formspree
+                const response = await fetch('https://formspree.io/f/mbdaykgw', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify({
-                        chat_id: CHAT_ID,
-                        text: message,
-                        parse_mode: 'HTML'
-                    })
+                    body: JSON.stringify(data)
                 });
 
                 if (response.ok) {
@@ -123,9 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         statusDiv.textContent = '';
                     }, 3000);
                 } else {
-                    const errorData = await response.json().catch(() => ({}));
-                    const errorMsg = errorData.description || 'Неизвестная ошибка Telegram API';
-                    throw new Error(`Telegram API Error (${response.status}): ${errorMsg}`);
+                    throw new Error('Ошибка отправки формы');
                 }
             } catch (error) {
                 console.error('Ошибка отправки:', error);
