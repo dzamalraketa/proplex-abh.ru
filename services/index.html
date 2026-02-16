@@ -25,6 +25,8 @@
             <a class="navbar-brand logo" href="../">
                 <img src="../assets/img/tech/logo_color_lg.png" alt="Proplex окна">
             </a>
+            <!-- Mobile CTA button - always visible -->
+            <a href="#" class="btn btn-success btn-sm d-lg-none me-2 js-open-modal">Вызвать замерщика</a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav">
                 <span class="visually-hidden">Меню</span>
                 <span class="navbar-toggler-icon"></span>
@@ -37,6 +39,9 @@
                     <li class="nav-item"><a class="nav-link" href="../why-proplex/">Почему PROPLEX?</a></li>
                     <li class="nav-item"><a class="nav-link" href="../portfolio/">Наши работы</a></li>
                     <li class="nav-item"><a class="nav-link" href="../contact/">Контакты</a></li>
+                    <li class="nav-item ms-3 d-none d-lg-block">
+                        <a href="#" class="btn btn-success js-open-modal">Вызвать замерщика</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -272,5 +277,6 @@
     
     <!-- Скрипты -->
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

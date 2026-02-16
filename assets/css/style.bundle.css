@@ -5,6 +5,11 @@
    Cards, Alerts, Dropdown, Forms, Utilities) + Custom Theme
    ========================================================== */
 
+/* ---- Modal styles ---- */
+.modal-overlay {
+  display: none;
+}
+
 /* ---- Font imports (font-display: swap) ---- */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Marck+Script&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
@@ -1207,4 +1212,13 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="submit"]:not(:disa
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-font-size: 1rem;
   }
+
+  /* Mobile button spacing */
+  .text-center .btn-lg {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 280px;
+  }
 }
+
+.modal-overlay { display: none !important; } .modal-overlay[style*="display: flex"] { display: flex !important; }

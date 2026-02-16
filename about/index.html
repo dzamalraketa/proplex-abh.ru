@@ -25,6 +25,8 @@
             <a class="navbar-brand logo" href="../">
                 <img src="../assets/img/tech/logo_color_lg.png" alt="Proplex окна">
             </a>
+            <!-- Mobile CTA button - always visible -->
+            <a href="#" class="btn btn-success btn-sm d-lg-none me-2 js-open-modal">Вызвать замерщика</a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav">
                 <span class="visually-hidden">Меню</span>
                 <span class="navbar-toggler-icon"></span>
@@ -37,6 +39,9 @@
                     <li class="nav-item"><a class="nav-link" href="../why-proplex/">Почему PROPLEX?</a></li>
                     <li class="nav-item"><a class="nav-link" href="../portfolio/">Наши работы</a></li>
                     <li class="nav-item"><a class="nav-link" href="../contact/">Контакты</a></li>
+                    <li class="nav-item ms-3 d-none d-lg-block">
+                        <a href="#" class="btn btn-success js-open-modal">Вызвать замерщика</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -280,7 +285,7 @@
                 </a>
             </div>
             <p class="text-center mt-3 text-muted small">
-                © 2009–2026. Установка окон PROPLEX в Абхазии.<br>
+                &copy; 2009–2026. Установка окон PROPLEX в Абхазии.<br>
                 Работаем в регионе уже более 15 лет.
             </p>
         </div>
@@ -300,6 +305,24 @@
        });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/100280222" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <!-- Модальное окно -->
+<div id="measurementModal" class="modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:99999; align-items:center; justify-content:center;">
+    <div class="modal-content" style="background:#1a1a1a; padding:30px; border-radius:15px; position:relative; max-width:400px; width:90%; border:1px solid #ffcc00;">
+        <span class="close-modal" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:28px; color:#ffcc00;">&times;</span>
+        <h2 style="color:#fff; margin-bottom:10px;">Заявка на замер</h2>
+        <form id="tgForm">
+            <input type="text" name="user_name" placeholder="Ваше имя" required style="width:100%; padding:12px; margin-bottom:10px; background:#222; border:1px solid #444; color:#fff;">
+            <input type="tel" name="user_phone" placeholder="Ваш телефон" required style="width:100%; padding:12px; margin-bottom:10px; background:#222; border:1px solid #444; color:#fff;">
+            <input type="text" name="user_address" placeholder="Адрес / Район" style="width:100%; padding:12px; margin-bottom:10px; background:#222; border:1px solid #444; color:#fff;">
+            <input type="text" name="_bot_check" style="display:none;">
+            <button type="submit" id="tgSubmitBtn" style="width:100%; padding:15px; background:#ffcc00; border:none; color:#000; font-weight:bold; cursor:pointer;">ОТПРАВИТЬ</button>
+        </form>
+        <div id="tgStatus" style="margin-top:15px; text-align:center; color:#ffcc00;"></div>
+    </div>
+</div>
+
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
