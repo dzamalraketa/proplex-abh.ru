@@ -1116,11 +1116,77 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="submit"]:not(:disa
 }
 
 /* Сохранить оригинальные цвета иконок */
-.whatsapp-button .dropdown-item .fa-whatsapp {
+.whatsapp-button .dropdown-item .fa-whatsapp,
+.whatsapp-button .dropdown-item i.fab.fa-whatsapp,
+.whatsapp-button .dropdown-item i.fa-whatsapp.text-success {
+  color: #25D366 !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.whatsapp-button .dropdown-item .fa-telegram,
+.whatsapp-button .dropdown-item i.fab.fa-telegram,
+.whatsapp-button .dropdown-item i.fa-telegram.text-primary {
+  color: #0088cc !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+/* Максимальные стили для гарантии отображения иконок */
+.whatsapp-button .dropdown-item i {
+  font-size: 1.5rem !important;
+  width: 25px !important;
+  height: 25px !important;
+  text-align: center !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+}
+
+/* Явные цвета для иконок */
+.whatsapp-button .dropdown-item i.fa-whatsapp,
+.whatsapp-button .dropdown-item i.fab.fa-whatsapp,
+.whatsapp-button .dropdown-item i.fa-whatsapp.text-success {
+  color: #25D366 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.whatsapp-button .dropdown-item i.fa-telegram,
+.whatsapp-button .dropdown-item i.fab.fa-telegram,
+.whatsapp-button .dropdown-item i.fa-telegram.text-primary {
+  color: #0088cc !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Дополнительные переопределения */
+.whatsapp-button .dropdown-item i[class*="fa-"].text-success {
   color: #25D366 !important;
 }
 
-.whatsapp-button .dropdown-item .fa-telegram {
+.whatsapp-button .dropdown-item i[class*="fa-"].text-primary {
+  color: #0088cc !important;
+}
+
+/* Гарантируем, что FontAwesome загружен */
+.fa, .fas, .far, .fab, .fal, .fad, .fass, .fasr, .fasl {
+  display: inline-block !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  line-height: 1 !important;
+}
+
+/* Специально для WhatsApp и Telegram */
+.fab.fa-whatsapp:before {
+  content: "\f232" !important;
+  color: #25D366 !important;
+}
+
+.fab.fa-telegram:before {
+  content: "\f2c6" !important;
   color: #0088cc !important;
 }
 
