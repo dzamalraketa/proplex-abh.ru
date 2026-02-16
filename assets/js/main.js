@@ -2,6 +2,9 @@
 const TG_TOKEN = '8537015865:AAEpvT0YLN6IJ9McCymLSeNNQ_M9h-soyGU'; // Ваш реальный токен
 const CHAT_ID = '7983665490'; // Ваш реальный ID чата
 
+// Глобальная переменная для отслеживания времени
+const startTime = Date.now();
+
 // Модальное окно функциональность
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('measurementModal');
@@ -36,11 +39,34 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Анти-бот проверка
+            // Анти-бот проверка времени
+            const timeSpent = (Date.now() - startTime) / 1000;
+            if (timeSpent < 4) {
+                statusDiv.textContent = 'Система защиты: пожалуйста, подождите немного...';
+                return;
+            }
+
+            // Анти-бот проверка (honeypot)
             const botCheckField = form.querySelector('input[name="_bot_check"]');
             if (botCheckField && botCheckField.value.trim() !== '') {
                 console.log('Bot detected');
                 return;
+            }
+
+            // Получение Yandex ClientID
+            let yandexId = 'не определен';
+            try {
+                if (typeof ym !== 'undefined' && ym(106849239, 'getClientID')) {
+                    yandexId = ym(106849239, 'getClientID');
+                }
+            } catch (e) {
+                console.log('Yandex ID не получен:', e);
+            }
+
+            // Заполняем скрытое поле yandex_id
+            const yandexIdField = form.querySelector('input[name="yandex_id"]');
+            if (yandexIdField) {
+                yandexIdField.value = yandexId;
             }
 
             // Сбор данных формы
@@ -48,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = {
                 user_name: formData.get('user_name'),
                 user_phone: formData.get('user_phone'),
-                user_address: formData.get('user_address')
+                user_address: formData.get('user_address'),
+                yandex_id: yandexId,
+                time_spent: timeSpent.toFixed(1)
             };
 
             // Отладочная информация
@@ -64,7 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const message = `🏠 ЗАЯВКА НА ЗАМЕР (PROPLEX)
 👤 Имя: ${data.user_name}
 📞 Телефон: ${data.user_phone}
-📍 Адрес: ${data.user_address || 'Не указан'}`;
+📍 Адрес: ${data.user_address || 'Не указан'}
+🔍 Yandex ID: ${data.yandex_id}
+⏱️ Время на странице: ${data.time_spent} сек.`;
 
                 const response = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
                     method: 'POST',
