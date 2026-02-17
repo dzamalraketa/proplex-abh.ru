@@ -1,4 +1,4 @@
-# robots.txt — proplex.online
+# robots.txt — proplex-abh.ru
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -11,10 +11,10 @@ Allow: /assets/js/
 Allow: /assets/img/
 
 # Карта сайта
-Sitemap: https://proplex.online/sitemap.xml
+Sitemap: https://proplex-abh.ru/sitemap.xml
 
 # Основной домен (Яндекс)
-Host: https://proplex.online
+Host: https://proplex-abh.ru
 
 # Задержка между запросами
 Crawl-delay: 1
