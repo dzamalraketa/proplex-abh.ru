@@ -22,28 +22,26 @@
 <body>
     <!-- Навигация с чистыми ссылками -->
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container">
             <a class="navbar-brand logo" href="../">
                 <img src="../assets/img/tech/logo_color_lg.png" alt="Proplex окна">
             </a>
             <!-- Mobile CTA button - always visible -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="btn btn-success btn-sm d-lg-none js-open-modal">Заказать</a>
-                <button data-toggle="navbar-collapse" class="navbar-toggler" type="button">
-                    <span class="visually-hidden">Меню</span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-             <div class="collapse navbar-collapse" id="navbarNav">
+            <a href="#" class="btn btn-success btn-sm d-lg-none me-2 js-open-modal">Вызвать замерщика</a>
+            <button data-toggle="navbar-collapse" class="navbar-toggler" type="button">
+                <span class="visually-hidden">Меню</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="../">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../services/">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./">Услуги</a></li>
                     <li class="nav-item"><a class="nav-link" href="../about/">О нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="../why-proplex/">Почему PROPLEX?</a></li>
                     <li class="nav-item"><a class="nav-link" href="../portfolio/">Наши работы</a></li>
                     <li class="nav-item"><a class="nav-link" href="../contact/">Контакты</a></li>
                     <li class="nav-item ms-3 d-none d-lg-block">
-                        <a href="../contact/" class="btn btn-dark btn-lg">Заказать консультацию</a>
+                        <a href="#" class="btn btn-success js-open-modal">Вызвать замерщика</a>
                     </li>
                 </ul>
             </div>
