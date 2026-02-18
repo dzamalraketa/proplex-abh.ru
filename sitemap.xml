@@ -4,7 +4,7 @@
     <!-- Главная страница -->
     <url>
         <loc>https://proplex-abh.ru/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -12,7 +12,7 @@
     <!-- Услуги -->
     <url>
         <loc>https://proplex-abh.ru/services/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -20,7 +20,7 @@
     <!-- О нас -->
     <url>
         <loc>https://proplex-abh.ru/about/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -28,7 +28,7 @@
     <!-- Почему PROPLEX? -->
     <url>
         <loc>https://proplex-abh.ru/why-proplex/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -36,7 +36,7 @@
     <!-- Наши работы -->
     <url>
         <loc>https://proplex-abh.ru/portfolio/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -44,7 +44,7 @@
     <!-- Контакты -->
     <url>
         <loc>https://proplex-abh.ru/contact/</loc>
-        <lastmod>2024-02-17</lastmod>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

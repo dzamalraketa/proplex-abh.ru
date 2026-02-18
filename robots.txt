@@ -5,21 +5,12 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
 
-# Разрешаем индексацию ресурсов
-Allow: /assets/css/
-Allow: /assets/js/
-Allow: /assets/img/
-
-# Карта сайта
 Sitemap: https://proplex-abh.ru/sitemap.xml
 
-# Основной домен (Яндекс)
-Host: https://proplex-abh.ru
-
-# Задержка между запросами
+User-agent: Yandex
 Crawl-delay: 1
+Host: proplex-abh.ru
 
-# Разрешаем индексацию изображений
 User-agent: Googlebot-Image
 Allow: /assets/img/
 

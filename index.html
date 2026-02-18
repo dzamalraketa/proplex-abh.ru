@@ -16,6 +16,7 @@
     <meta property="og:title" content="Пластиковые окна PROPLEX в Сухуме - Установка под ключ от 15 000₽">
     <meta property="og:description" content="✅ Качественные окна PROPLEX с профессиональным монтажом в Абхазии. Бесплатный замер, гарантия 60 лет. Собственное производство в Сухуме.">
     <meta property="og:image" content="https://proplex-abh.ru/assets/img/logo.png">
+    <meta property="og:image:alt" content="PROPLEX Абхазия">
     <meta property="og:url" content="https://proplex-abh.ru/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
@@ -35,6 +36,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
     <link rel="icon" sizes="16x16 32x32" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Preconnect для ускорения загрузки шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,45 +53,108 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PROPLEX Абхазия - Пластиковые окна в Сухуме",
-      "description": "✅ Установка пластиковых окон PROPLEX под ключ в Сухуме и Абхазии. Бесплатный замер, гарантия 60 лет. Собственное производство.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "г. Сухум",
-        "addressLocality": "Сухум",
-        "addressRegion": "Абхазия",
-        "addressCountry": "RU"
-      },
-      "telephone": "+79407117706",
-      "url": "https://proplex-abh.ru/",
-      "logo": "https://proplex-abh.ru/assets/img/logo.png",
-      "image": "https://proplex-abh.ru/assets/img/tech/logo_color_lg.png",
-      "priceRange": "15000-50000",
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
+          "@type": "WebSite",
+          "@id": "https://proplex-abh.ru/#website",
+          "url": "https://proplex-abh.ru/",
+          "name": "PROPLEX Абхазия",
+          "inLanguage": "ru-RU"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://proplex-abh.ru/#organization",
+          "name": "PROPLEX Абхазия - Пластиковые окна в Сухуме",
+          "description": "✅ Установка пластиковых окон PROPLEX под ключ в Сухуме и Абхазии. Бесплатный замер, гарантия 60 лет. Собственное производство.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "г. Сухум",
+            "addressLocality": "Сухум",
+            "addressRegion": "Абхазия",
+            "addressCountry": "RU"
+          },
+          "telephone": "+79407117706",
+          "url": "https://proplex-abh.ru/",
+          "logo": "https://proplex-abh.ru/assets/img/logo.png",
+          "image": "https://proplex-abh.ru/assets/img/tech/logo_color_lg.png",
+          "priceRange": "15000-50000",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
           ],
-          "opens": "09:00",
-          "closes": "18:00"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "43.0000",
+            "longitude": "41.0000"
+          },
+          "sameAs": [
+            "https://www.instagram.com/okna.proplex.abh/",
+            "https://t.me/Skywayapsny",
+            "https://wa.me/+79407117706"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://proplex-abh.ru/#webpage",
+          "url": "https://proplex-abh.ru/",
+          "name": "Пластиковые окна PROPLEX в Сухуме - Установка под ключ от 15 000₽ | Гарантия 60 лет",
+          "isPartOf": {
+            "@id": "https://proplex-abh.ru/#website"
+          },
+          "about": {
+            "@id": "https://proplex-abh.ru/#organization"
+          },
+          "inLanguage": "ru-RU"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://proplex-abh.ru/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Сколько стоит установка пластиковых окон в Абхазии?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ориентировочно стандартное окно с монтажом «под ключ» — от 15 000 руб. Точную стоимость назовет специалист после бесплатного замера в Сухуме и по Абхазии."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Сколько занимает изготовление и установка?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Обычно изготовление занимает 3–7 дней. Монтаж на объекте выполняем в согласованный день, после замера и расчета."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Какая гарантия на окна PROPLEX?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Гарантия на профиль PROPLEX — 60 лет. Также предоставляем гарантию на выполненный монтаж."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Вы работаете только в Сухуме?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Нет, выполняем замер и установку пластиковых окон по всей Абхазии. Напишите в WhatsApp или Telegram, чтобы согласовать выезд."
+              }
+            }
+          ]
         }
-      ],
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.0000",
-        "longitude": "41.0000"
-      },
-      "sameAs": [
-        "https://www.instagram.com/okna.proplex.abh/",
-        "https://t.me/Skywayapsny",
-        "https://wa.me/+79407117706"
       ]
     }
     </script>
@@ -186,7 +251,7 @@
                         <p class="text-start" style="font-size: 1.1em;">
                             <strong><span style="color: rgb(31, 41, 55);">✅</span></strong>&nbsp;<strong>Бесплатный замер и расчет</strong> — специалист приедет в удобное время.<br><br>
                             <strong><span style="color: rgb(31, 41, 55);">✅</span></strong>&nbsp;<strong>Изготовление на производстве</strong> — срок 3–7 дней, любые размеры.<br><br>
-                            <strong><span style="color: rgb(31, 41, 55);">✅</span></strong> <strong>Профессиональный монтаж</strong> — чисто, аккуратно, .<br><br>
+                            <strong><span style="color: rgb(31, 41, 55);">✅</span></strong> <strong>Профессиональный монтаж</strong> — чисто, аккуратно, по технологии.<br><br>
                             <strong><span style="color: rgb(31, 41, 55);">✅</span></strong>&nbsp;<strong>Прозрачные условия</strong> — фиксированная смета, без скрытых платежей.
                         </p>
                         
@@ -274,6 +339,48 @@
                     </div>
                     <div class="col-md-4 text-center">
                         <i class="fas fa-images" style="font-size: 5em; color: #1e4e9c;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="portfolio-block" style="padding: 50px 0;">
+            <div class="container">
+                <div class="heading">
+                    <h2><span style="font-weight: normal !important; color: rgb(32, 80, 157);">Частые вопросы</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Сколько стоит установка пластиковых окон в Абхазии?</h3>
+                                <p class="mb-0 text-dark">Ориентировочно стандартное окно с монтажом «под ключ» — <strong>от 15 000 руб.</strong> Точную цену назовет специалист после <strong>бесплатного замера</strong> в Сухуме или другом городе Абхазии.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Сколько занимает изготовление и установка?</h3>
+                                <p class="mb-0 text-dark">Обычно изготовление занимает <strong>3–7 дней</strong>. Монтаж выполняем в согласованный день после замера и расчета.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Какая гарантия на окна PROPLEX?</h3>
+                                <p class="mb-0 text-dark">На профиль PROPLEX действует гарантия <strong>60 лет</strong>. Также даем гарантию на выполненный монтаж.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h3 class="h5 mb-3">Вы работаете только в Сухуме?</h3>
+                                <p class="mb-0 text-dark">Нет, выполняем замер и установку пластиковых окон <strong>по всей Абхазии</strong>. Напишите в WhatsApp или Telegram, чтобы согласовать выезд.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
