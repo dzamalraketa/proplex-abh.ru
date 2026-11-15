@@ -9,7 +9,6 @@ Sitemap: https://proplex-abh.ru/sitemap.xml
 
 User-agent: Yandex
 Crawl-delay: 1
-Host: proplex-abh.ru
 
 User-agent: Googlebot-Image
 Allow: /assets/img/

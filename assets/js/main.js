@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Закрытие по Esc
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display !== 'none') {
+            modal.style.display = 'none';
+        }
+    });
+
     // Отправка формы
     if (form) {
         form.addEventListener('submit', async function(e) {
@@ -49,11 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Получение Yandex ClientID
+            // Получение Yandex ClientID (асинхронный API Метрики)
             let yandexId = 'не определен';
             try {
-                if (typeof ym !== 'undefined' && ym(106849239, 'getClientID')) {
-                    yandexId = ym(106849239, 'getClientID');
+                if (typeof ym !== 'undefined') {
+                    yandexId = await new Promise(resolve => {
+                        ym(100280222, 'getClientID', id => resolve(id || 'не определен'));
+                        setTimeout(() => resolve('не определен'), 1500);
+                    });
                 }
             } catch (e) {
                 console.log('Yandex ID не получен:', e);
@@ -96,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     // Яндекс.Метрика цель
                     if (typeof ym !== 'undefined') {
-                        ym(106849239, 'reachGoal', 'lead_sent');
+                        ym(100280222, 'reachGoal', 'lead_sent');
                     }
                     
                     statusDiv.textContent = '✅ Заявка отправлена! Мастер свяжется с вами.';
